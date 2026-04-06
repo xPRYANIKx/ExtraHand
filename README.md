@@ -1,8 +1,8 @@
 # ExtraHand
 
-ExtraHand — это оверлей для Nintendo Switch на базе Tesla Menu, объединяющий управление производительностью, чит-коды, системную информацию и управление энергопитанием в одном меню.
+**ExtraHand** — это оверлей для **Nintendo Switch** на базе [**Tesla Menu**](https://github.com/WerWolv/libtesla), объединяющий управление производительностью, чит-коды, системную информацию и управление энергопитанием в одном меню.
 
-ExtraHand is a Nintendo Switch overlay built for Tesla Menu that combines performance control, cheat management, system information, and power management in a single menu.
+**ExtraHand** is a **Nintendo Switch** overlay built for [**Tesla Menu**](https://github.com/WerWolv/libtesla) that combines performance control, cheat management, system information, and power management in a single menu.
 
 ---
 
@@ -13,17 +13,17 @@ ExtraHand is a Nintendo Switch overlay built for Tesla Menu that combines perfor
 ![ПРОИЗВОДИТЕЛЬНОСТЬ](https://github.com/user-attachments/assets/93716a59-4deb-431e-aa61-5dd2c685d180)
 ![ПРОФИЛИ](https://github.com/user-attachments/assets/7681f627-c2e7-41de-a33a-53976968cd78)
 
-Управление частотами CPU, GPU и MEM через sys-clk, выбор профилей и настройка кастомных значений.
+Управление частотами **CPU**, **GPU** и **MEM** через [**sys-clk**](https://github.com/WerWolv/libtesla), выбор профилей и настройка кастомных значений.
 
-Control CPU, GPU, and MEM frequencies via sys-clk, select profiles, and configure custom values.
+Control **CPU**, **GPU**, and **MEM** frequencies via [**sys-clk**](https://github.com/WerWolv/libtesla), select profiles, and configure custom values.
 
 ### Чит-коды / Cheat codes
 
 ![ЧИТЫ](https://github.com/user-attachments/assets/b12109d8-d6f5-4d27-9d8f-95f5cc00c9e8)
 
-Поддержка Atmosphère dmnt:cht, включение и выключение читов, а также отображение активных чит-кодов.
+Поддержка [**Atmosphère dmnt:cht**](https://github.com/Atmosphere-NX/Atmosphere), включение и выключение читов, а также отображение активных чит-кодов.
 
-Support for Atmosphère dmnt:cht, enabling and disabling cheats, and displaying active cheat codes.
+Support for [**Atmosphère dmnt:cht**](https://github.com/Atmosphere-NX/Atmosphere), enabling and disabling cheats, and displaying active cheat codes.
 
 ### Информация о системе / System information
 
@@ -56,9 +56,9 @@ Show current and average power usage, temperature, and power actions.
 
 ## Особенности / Special note
 
-В используемой версии `tesla.hpp` добавлена поддержка русского языка для нижней панели Tesla Menu (`Back` / `OK`).
+В используемой версии `tesla.hpp` добавлена поддержка русского языка для нижней панели [**Tesla Menu**](https://github.com/WerWolv/libtesla) _(`Back` / `OK`)_.
 
-The used `tesla.hpp` version includes built-in Russian support for the Tesla footer (`Back` / `OK` labels).
+The used `tesla.hpp` version includes built-in Russian support for the [**Tesla Menu**](https://github.com/WerWolv/libtesla) _(`Back` / `OK` labels)_.
 
 ```cpp
 enum class FooterLang {
@@ -104,9 +104,9 @@ extern FooterLang footerLang;
 ---
 ## Установка / Installation
 
-1. Установить sys-clk. Install sys-clk.
-2. Скопировать `.ovl`-файл в папку overlays. Copy the `.ovl` file into the overlays folder (switch/.overlays).
-3. Запустить оверлей через горячую клавишу. Launch the overlay using the hotkey (L + R3 + D-Pad Down)
+1. Установить [**sys-clk**](https://github.com/WerWolv/libtesla). Install [**sys-clk**](https://github.com/WerWolv/libtesla).
+2. Скопировать `.ovl`-файл в папку overlays. Copy the `.ovl` file into the overlays folder _(switch/.overlays)_.
+3. Запустить оверлей через горячую клавишу. Launch the overlay using the hotkey _(L + R3 + D-Pad Down)_
 
 
 ---
