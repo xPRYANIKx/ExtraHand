@@ -112,11 +112,12 @@ static const char* getControllerTypeDisplay(Lang /*uiLang*/, u32 style) {
 
 static std::string getConsoleModelDisplay(SetSysProductModel model) {
     switch (model) {
+    case SetSysProductModel_Nx:
     case SetSysProductModel_Iowa:
         return "Nintendo Switch";
     case SetSysProductModel_Hoag:
         return "Nintendo Switch Lite";
-    case SetSysProductModel_Calcio:
+    case SetSysProductModel_Aula:
         return "Nintendo Switch OLED";
     default:
         return "Unknown";
