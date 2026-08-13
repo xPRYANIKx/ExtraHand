@@ -17,6 +17,10 @@
 
 Control **CPU**, **GPU**, and **MEM** frequencies via [**sys-clk**](https://github.com/WerWolv/libtesla), select profiles, and configure custom values.
 
+**Добавлено в версии 1.2:** показ текущего и среднего энергопотребления, заряда батареи, температуры и действий питания. Компактный статус батареи имеет вид `X%-D/C/L/U`: отключено, подключено, низкая мощность или неподдерживаемое зарядное устройство.
+
+**Added in version 1.2:** show current and average power usage, battery and charger status, temperature, and power actions. The compact battery status uses `X%-D/C/L/U` for disconnected, connected, low-power, and unsupported chargers.
+
 ### Чит-коды / Cheat codes
 
 ![ЧИТЫ](https://github.com/user-attachments/assets/b12109d8-d6f5-4d27-9d8f-95f5cc00c9e8)
@@ -36,13 +40,6 @@ Display console model, system version, storage information, and connected contro
 ### Электропитание / Power management
 
 ![ПЕРЕЗАГРУЗКА](https://github.com/user-attachments/assets/bc010b91-0611-487c-999d-0ab5418785f0)
-
-
-Показ текущего и среднего энергопотребления, заряда батареи, температуры и действий питания.
-Компактный статус батареи имеет вид `X%-D/C/L/U`: отключено, подключено, низкая мощность или неподдерживаемое зарядное устройство.
-
-Show current and average power usage, battery and charger status, temperature, and power actions.
-The compact battery status uses `X%-D/C/L/U` for disconnected, connected, low-power, and unsupported chargers.
 
 ---
 
