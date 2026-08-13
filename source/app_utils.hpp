@@ -11,6 +11,7 @@ extern HotkeyPreset currentHotkey;
 extern std::string g_selfOverlayFileName;
 
 std::string resultToHex(Result rc);
+std::string getCompactBatteryStatus();
 
 std::string getFileNameFromPath(const std::string& fullPath);
 
