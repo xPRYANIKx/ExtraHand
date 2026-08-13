@@ -30,6 +30,61 @@ std::string resultToHex(Result rc) {
     return std::string(buf);
 }
 
+std::string getCompactBatteryStatus() {
+    static std::string cachedStatus = "-";
+    static uint64_t lastRefreshTick = 0;
+    static bool hasRefreshed = false;
+
+    const uint64_t now = armGetSystemTick();
+    if (hasRefreshed && armTicksToNs(now - lastRefreshTick) < 1000000000ULL)
+        return cachedStatus;
+
+    hasRefreshed = true;
+    lastRefreshTick = now;
+
+    u32 percentage = 0;
+    PsmChargerType chargerType = PsmChargerType_NotSupported;
+    bool valid = false;
+
+    tsl::hlp::doWithSmSession([&] {
+        Result rc = psmInitialize();
+        if (R_FAILED(rc))
+            return;
+
+        const Result percentageRc = psmGetBatteryChargePercentage(&percentage);
+        const Result chargerRc = psmGetChargerType(&chargerType);
+        valid = R_SUCCEEDED(percentageRc) && R_SUCCEEDED(chargerRc);
+        psmExit();
+        });
+
+    if (!valid) {
+        cachedStatus = "-";
+        return cachedStatus;
+    }
+
+    char chargerCode = 'U';
+    switch (chargerType) {
+    case PsmChargerType_Unconnected:
+        chargerCode = 'D';
+        break;
+    case PsmChargerType_EnoughPower:
+        chargerCode = 'C';
+        break;
+    case PsmChargerType_LowPower:
+        chargerCode = 'L';
+        break;
+    case PsmChargerType_NotSupported:
+    default:
+        chargerCode = 'U';
+        break;
+    }
+
+    char buffer[16];
+    std::snprintf(buffer, sizeof(buffer), "%u%%-%c", percentage, chargerCode);
+    cachedStatus = buffer;
+    return cachedStatus;
+}
+
 std::string getFileNameFromPath(const std::string& fullPath) {
     const std::size_t pos = fullPath.find_last_of("/\\");
     return (pos == std::string::npos) ? fullPath : fullPath.substr(pos + 1);

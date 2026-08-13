@@ -285,7 +285,9 @@ namespace sysclk {
                 formatPowerMilliwatts((int)m_ctx.power[SysClkPowerSensor_Now]) +
                 " | " +
                 tr(currentLang, TextId::PowerAvgPrefix) + " " +
-                formatPowerMilliwatts((int)m_ctx.power[SysClkPowerSensor_Avg]);
+                formatPowerMilliwatts((int)m_ctx.power[SysClkPowerSensor_Avg]) +
+                " | " +
+                getCompactBatteryStatus();
 
             m_tempValue = formatTemperatureSummary(m_ctx);
         }

@@ -38,9 +38,11 @@ Display console model, system version, storage information, and connected contro
 ![ПЕРЕЗАГРУЗКА](https://github.com/user-attachments/assets/bc010b91-0611-487c-999d-0ab5418785f0)
 
 
-Показ текущего и среднего энергопотребления, температуры и действий питания.
+Показ текущего и среднего энергопотребления, заряда батареи, температуры и действий питания.
+Компактный статус батареи имеет вид `X%-D/C/L/U`: отключено, подключено, низкая мощность или неподдерживаемое зарядное устройство.
 
-Show current and average power usage, temperature, and power actions.
+Show current and average power usage, battery and charger status, temperature, and power actions.
+The compact battery status uses `X%-D/C/L/U` for disconnected, connected, low-power, and unsupported chargers.
 
 ---
 

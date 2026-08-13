@@ -45,7 +45,9 @@ void PowerGui::refreshContext() {
         sysclk::formatPowerMilliwatts((int)m_ctx.power[sysclk::SysClkPowerSensor_Now]) +
         " | " +
         tr(currentLang, TextId::PowerAvgPrefix) + " " +
-        sysclk::formatPowerMilliwatts((int)m_ctx.power[sysclk::SysClkPowerSensor_Avg]);
+        sysclk::formatPowerMilliwatts((int)m_ctx.power[sysclk::SysClkPowerSensor_Avg]) +
+        " | " +
+        getCompactBatteryStatus();
 
     m_tempValue = sysclk::formatTemperatureSummary(m_ctx);
 }
